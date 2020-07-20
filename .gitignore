@@ -1,4 +1,4 @@
 	chaincode/fabcar/source/node_modules/
   chaincode/fabcar/build/
   chaincode/fabcar/build/fabcar.tar.gz
-  
+  fabric-samples/*

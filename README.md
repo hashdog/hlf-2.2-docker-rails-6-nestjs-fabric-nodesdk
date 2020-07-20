@@ -38,7 +38,7 @@ then
 
 it has to looks like this
     
-    ![swagger](../media/swagger.png?raw=true)
+![swagger](../media/swagger.png?raw=true)
 
 now you try enrollAdmin user like this:
 
@@ -57,7 +57,7 @@ then
 
 it has to looks like this
 
-    ![todoapp](../media/todoapp.png?raw=true)
+![todoapp](../media/todoapp.png?raw=true)
 
 all request going to send directly to HYPERLEDGER FABRIC, if you want you can check the fabric ruby client
 

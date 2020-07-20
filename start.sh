@@ -5,7 +5,7 @@ export FABRIC_CFG_PATH=${PWD}/config
 
 . ./utils.sh
 printSeparator "Downlaod fabric-samples binaries"
-curl -sSL https://bit.ly/2ysbOFE | bash -s 2.2.0 1.4.7 -d -b
+curl -sSL https://bit.ly/2ysbOFE | bash -s 2.2.0 1.4.7 -d
 export PATH=${PWD}/fabric-samples/bin:$PATH
 printSeparator "Generate crypto-material for Org1"
 cryptogen generate --config=./cryptogen-input/crypto-config-org1.yaml --output="crypto-material"

@@ -1,4 +1,4 @@
-# HyperLedger Fabric 2.2 + TODO APP Rails 6 + Fabric-sdk-nestjs chaincode restapi
+# HyperLedger Fabric 2.2 + DOCKER + TODO APP Rails 6 + Fabric-sdk-nestjs chaincode restapi
 
 ## Hello
 ![network](https://miro.medium.com/max/700/1*nz4hX8J2DII6fcXzJap37Q.png "network")
@@ -51,7 +51,9 @@ then
 
     open localhost:3000
 
-all request going to send directly to HYPERLEDGER FABRIC 
+all request going to send directly to HYPERLEDGER FABRIC, check the fabric ruby client
+
+    `lib/services/hyperledger_fabric_client.rb`
 
 
 ## Acknowledgment

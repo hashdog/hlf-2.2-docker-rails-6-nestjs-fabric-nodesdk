@@ -1,0 +1,21 @@
+{
+  "name": "stimulus_reflex_todomvc",
+  "private": true,
+  "scripts": {
+    "prettier-fix": "yarn run prettier-standard '**/*.{js,jsx,json,css,yaml,yml,md}'"
+  },
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/webpacker": "^4.0.7",
+    "stimulus": "^1.1.1",
+    "stimulus_reflex": "^2.1.2",
+    "todomvc-app-css": "^2.2.0",
+    "todomvc-common": "^1.0.5",
+    "velocity-animate": "^1.5.2"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "prettier-standard": "^15.0.1",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

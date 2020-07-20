@@ -1,0 +1,22 @@
+version: "3"
+
+networks:
+  apnet:
+
+services:
+  chaincode-rest-api:
+    networks:
+      - apnet
+    container_name: chaincode-rest-api
+    image: node:12
+    working_dir: /app
+    ports:
+      - 8080:8080
+    volumes:
+      - ../crypto-material:/app/artifacts/crypto
+      - ../services/fabric-sdk-nestjs:/app
+      - ../chaincode:/chaincode
+    environment:
+      - NODE_ENV=DEV
+    command: sh -c "cd /app && npm install && npm run start"
+    

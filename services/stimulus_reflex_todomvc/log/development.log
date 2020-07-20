@@ -1,0 +1,123 @@
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:16:00 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 3979)
+
+
+  
+Errno::EADDRNOTAVAIL (Failed to open TCP connection to localhost:8080 (Cannot assign requested address - connect(2) for "localhost" port 8080)):
+  
+lib/services/hyperledger_fabric_client.rb:14:in `all_todo'
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:16:02 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TodosController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1303)
+
+
+  
+Errno::EADDRNOTAVAIL (Failed to open TCP connection to localhost:8080 (Cannot assign requested address - connect(2) for "localhost" port 8080)):
+  
+lib/services/hyperledger_fabric_client.rb:14:in `all_todo'
+app/controllers/todos_controller.rb:6:in `index'
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:18:13 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb within layouts/application
+  Rendered collection of todos/_todo.html.erb [4 times] (Duration: 2.5ms | Allocations: 371)
+  Rendered todos/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 878)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+Completed 200 OK in 16562ms (Views: 16135.5ms | ActiveRecord: 0.0ms | Allocations: 7423)
+
+
+Started GET "/cable" for 172.19.0.1 at 2020-07-20 19:18:30 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:18:30 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+StimulusReflex::Channel is transmitting the subscription confirmation
+StimulusReflex::Channel is streaming from StimulusReflex::Channel
+StimulusReflex::Channel#receive({"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId3", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>[]})
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:19:07 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb within layouts/application
+  Rendered collection of todos/_todo.html.erb [4 times] (Duration: 0.1ms | Allocations: 68)
+  Rendered todos/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 179)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 225ms (Views: 51.4ms | ActiveRecord: 0.0ms | Allocations: 4339)
+
+
+Finished "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:08 +0000
+StimulusReflex::Channel stopped streaming from StimulusReflex::Channel
+Started GET "/cable" for 172.19.0.1 at 2020-07-20 19:19:08 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:08 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection ({"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})
+StimulusReflex::Channel is transmitting the subscription confirmation
+StimulusReflex::Channel is streaming from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}
+StimulusReflex::Channel#receive({"target"=>"TodosReflex#create", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"autofocus"=>"", "class"=>"new-todo", "placeholder"=>"What needs to be done?", "data-reflex"=>"change->TodosReflex#create", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"test", "checked"=>false, "selected"=>false}, "selectors"=>[]})
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb within layouts/application
+  Rendered collection of todos/_todo.html.erb [5 times] (Duration: 0.1ms | Allocations: 82)
+  Rendered todos/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 220ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 4484)
+
+
+[ActionCable] Broadcasting to StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}: {"cableReady"=>true, "operations"=>{"morph"=>[{"selector"=>"body", "html"=>"\n    <section class=\"todoapp\" data-controller=\"todos\">\n  <header class=\"header\">\n    <h1><small>all todos</small></h1>\n    <input autofocus class=\"new-todo\" placeholder=\"What needs to be done?\" data-reflex=\"change-&gt;TodosReflex#create\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n  </header>\n\n    <section class=\"main\">\n      <input class=\"toggle-all\" type=\"checkbox\">\n      <label data-reflex=\"click-&gt;TodosReflex#toggle_all\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n        Mark all as complete\n      </label>\n      <ul class=\"todo-list\" data-target=\"todos.list\">\n          <li class=\"\" data-reflex=\"click-&gt;TodosReflex#edit\" data-id=\"todoId725\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n    <div class=\"view\">\n      <input type=\"checkbox\" class=\"toggle\" data-reflex=\"change-&gt;TodosReflex#toggle\" data-id=\"todoId725\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n      <label>\n        test\n      </label>\n    </div>\n  </li>\n  <li class=\"\" data-reflex=\"click-&gt;TodosReflex#edit\" data-id=\"todoId3\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n    <div class=\"view\">\n      <input type=\"checkbox\" class=\"toggle\" data-reflex=\"change-&gt;TodosReflex#toggle\" data-id=\"todoId3\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n      <label>\n        play guitar\n      </label>\n    </div>\n  </li>\n  <li class=\"completed\" data-reflex=\"click-&gt;TodosReflex#edit\" data-id=\"todoId2\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n    <div class=\"view\">\n      <input checked type=\"checkbox\" class=\"toggle\" data-reflex=\"change-&gt;TodosReflex#toggle\" data-id=\"todoId2\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n      <label>\n        cook bread\n      </label>\n    </div>\n  </li>\n  <li class=\"\" data-reflex=\"click-&gt;TodosReflex#edit\" data-id=\"todoId1\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n    <div class=\"view\">\n      <input type=\"checkbox\" class=\"toggle\" data-reflex=\"change-&gt;TodosReflex#toggle\" data-id=\"todoId1\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n      <label>\n        wash todo\n      </label>\n    </div>\n  </li>\n  <li class=\"completed\" data-reflex=\"click-&gt;TodosReflex#edit\" data-id=\"todoId0\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n    <div class=\"view\">\n      <input checked type=\"checkbox\" class=\"toggle\" data-reflex=\"change-&gt;TodosReflex#toggle\" data-id=\"todoId0\" data-room=\"eb4600cbec0edb00254805a2d174cd71\">\n      <label>\n        shopping today\n      </label>\n    </div>\n  </li>\n\n      </ul>\n    </section>\n\n</section>\n\n  ", "childrenOnly"=>true, "permanentAttributeName"=>nil, "stimulusReflex"=>{"target"=>"TodosReflex#create", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"autofocus"=>"", "class"=>"new-todo", "placeholder"=>"What needs to be done?", "data-reflex"=>"change->TodosReflex#create", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"test", "checked"=>false, "selected"=>false}, "selectors"=>["body"], "last"=>true}}]}}
+StimulusReflex::Channel transmitting {"cableReady"=>true, "operations"=>{"morph"=>[{"selector"=>"body", "html"=>"\n    <section class=\"todoapp\" data-controller=\"todos\">\n  <header class=\"header\">\n    <h1><small>all todos</small></h1>\n    <input autofocus class=\"new-todo\" placeholder=\"What needs to be done?\" data-reflex=\... (via streamed from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:19:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb within layouts/application
+  Rendered collection of todos/_todo.html.erb [5 times] (Duration: 0.1ms | Allocations: 82)
+  Rendered todos/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 229ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 4367)
+
+
+Finished "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:20 +0000
+StimulusReflex::Channel stopped streaming from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}
+Started GET "/cable" for 172.19.0.1 at 2020-07-20 19:19:20 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:20 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection ({"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})
+StimulusReflex::Channel is transmitting the subscription confirmation
+StimulusReflex::Channel is streaming from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}
+StimulusReflex::Channel#receive({"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId725", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>[]})
+Started GET "/" for 172.19.0.1 at 2020-07-20 19:19:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TodosController#index as HTML
+  Rendering todos/index.html.erb within layouts/application
+  Rendered collection of todos/_todo.html.erb [5 times] (Duration: 0.1ms | Allocations: 82)
+  Rendered todos/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 220ms (Views: 48.4ms | ActiveRecord: 0.0ms | Allocations: 4356)
+
+
+Finished "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:38 +0000
+StimulusReflex::Channel stopped streaming from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}
+Started GET "/cable" for 172.19.0.1 at 2020-07-20 19:19:38 +0000
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/cable/" [WebSocket] for 172.19.0.1 at 2020-07-20 19:19:39 +0000
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection ({"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})
+StimulusReflex::Channel is transmitting the subscription confirmation
+StimulusReflex::Channel is streaming from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}
+[31mStimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'[0m
+[ActionCable] Broadcasting to StimulusReflex::Channel: {"cableReady"=>true, "operations"=>{"dispatchEvent"=>[{"name"=>"stimulus-reflex:500", "detail"=>{"stimulusReflex"=>{"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId3", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>["body"], "error"=>"StimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'"}}}]}}
+StimulusReflex::Channel#receive({"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId725", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>[]})
+[31mStimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'[0m
+[ActionCable] Broadcasting to StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}: {"cableReady"=>true, "operations"=>{"dispatchEvent"=>[{"name"=>"stimulus-reflex:500", "detail"=>{"stimulusReflex"=>{"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId725", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>["body"], "error"=>"StimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'"}}}]}}
+StimulusReflex::Channel transmitting {"cableReady"=>true, "operations"=>{"dispatchEvent"=>[{"name"=>"stimulus-reflex:500", "detail"=>{"stimulusReflex"=>{"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=... (via streamed from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})
+[31mStimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'[0m
+[ActionCable] Broadcasting to StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"}: {"cableReady"=>true, "operations"=>{"dispatchEvent"=>[{"name"=>"stimulus-reflex:500", "detail"=>{"stimulusReflex"=>{"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=>"todoId725", "data-room"=>"eb4600cbec0edb00254805a2d174cd71", "data-action"=>"change->todos#__perform", "value"=>"on", "checked"=>true, "selected"=>false}, "selectors"=>["body"], "error"=>"StimulusReflex::Channel Failed to invoke TodosReflex#toggle! http://localhost:3000/ Timed out reading data from server /opt/bitnami/ruby/lib/ruby/gems/2.6.0/gems/rest-client-2.1.0/lib/restclient/request.rb:751:in `rescue in transmit'"}}}]}}
+StimulusReflex::Channel transmitting {"cableReady"=>true, "operations"=>{"dispatchEvent"=>[{"name"=>"stimulus-reflex:500", "detail"=>{"stimulusReflex"=>{"target"=>"TodosReflex#toggle", "args"=>[], "url"=>"http://localhost:3000/", "attrs"=>{"type"=>"checkbox", "class"=>"toggle", "data-reflex"=>"change->TodosReflex#toggle", "data-id"=... (via streamed from StimulusReflex::Channel:{"public_id"=>"eb4600cbec0edb00254805a2d174cd71"})

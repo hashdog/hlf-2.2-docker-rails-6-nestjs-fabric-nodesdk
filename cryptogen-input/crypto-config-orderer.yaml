@@ -1,0 +1,7 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: ap.com
+    Template:
+      Count: 1
+      SANS:
+        - localhost

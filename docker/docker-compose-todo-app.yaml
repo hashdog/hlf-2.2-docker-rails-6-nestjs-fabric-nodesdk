@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  apnet:
+
+services:
+  todo_app:
+    networks:
+      - apnet
+    container_name: todo_app
+    image: docker.io/bitnami/rails:6-debian-10
+    working_dir: /app
+    ports:
+      - 3000:3000
+    volumes:
+      - ../services/stimulus_reflex_todomvc:/app
+    environment:
+      - SECRET_KEY_BASE=xxxx
+      - RAILS_ENV=development
+    command: sh -c "cd /app && bin/setup && bin/rails start"
+    

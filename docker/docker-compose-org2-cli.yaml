@@ -1,0 +1,42 @@
+version: "3"
+
+networks:
+  apnet:
+
+services:
+  org2-cli:
+    networks:
+      - apnet
+    container_name: org2-cli
+    image: hyperledger/fabric-tools:$IMAGE_TAG
+    volumes:
+      - ../crypto-material/peerOrganizations/org2.ap.com/peers/peer0.org2.ap.com/msp:/etc/hyperledger/fabric/msp
+      - ../crypto-material/peerOrganizations/org2.ap.com/peers/peer0.org2.ap.com/tls:/etc/hyperledger/fabric/tls
+      - ../crypto-material/peerOrganizations/org1.ap.com/peers/peer0.org1.ap.com/tls/ca.crt:/etc/hyperledger/fabric/ca-tls-org1.crt
+      - ../crypto-material/peerOrganizations/org2.ap.com/users/Admin@org2.ap.com/msp:/etc/hyperledger/fabric/admin
+      - ../config:/etc/hyperledger/fabric/config      
+      - ../crypto-material/ordererOrganizations/ap.com/msp/:/etc/hyperledger/fabric/ordererMSP
+      - ../chaincode:/etc/hyperledger/fabric/chaincode
+    environment:
+      # Generic peer variables
+      - FABRIC_LOGGING_SPEC=INFO
+      
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/etc/hyperledger/fabric/tls/server.crt 
+      - CORE_PEER_TLS_KEY_FILE=/etc/hyperledger/fabric/tls/server.key 
+      - CORE_PEER_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/tls/ca.crt 
+      - CORE_PEER_ORG1_TLS_ROOTCERT_FILE=/etc/hyperledger/fabric/ca-tls-org1.crt
+      # Specific peer variables
+      - CORE_PEER_ID=peer0.org2.ap.com
+      - CORE_PEER_ADDRESS=peer0.org2.ap.com:8051
+      - CORE_PEER_LISTENADDRESS=0.0.0.0:8051
+      - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.org2.ap.com:8051
+      - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.org2.ap.com:8051
+      - CORE_PEER_LOCALMSPID=Org2MSP
+      - CORE_PEER_MSPCONFIGPATH=/etc/hyperledger/fabric/admin
+      - FABRIC_CFG_PATH=/etc/hyperledger/fabric/config
+      - CA_CERT=/etc/hyperledger/fabric/ordererMSP/tlscacerts/tlsca.ap.com-cert.pem
+
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash
+    

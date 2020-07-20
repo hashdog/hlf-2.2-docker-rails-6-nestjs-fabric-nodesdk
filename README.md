@@ -35,6 +35,11 @@ Now you can start chaincode-rest-api service
 then
 
     open localhost:8080/api-docs
+    
+it has to looks like this
+
+    ![swagger](https://github.com/hashdog/hlf-2.2-docker-rails-6-nestjs-fabric-nodesdk/blob/media/swagger.png?raw=true "swagger")
+
 
 now you try enrollAdmin user like this:
 
@@ -51,7 +56,12 @@ then
 
     open localhost:3000
 
-all request going to send directly to HYPERLEDGER FABRIC, check the fabric ruby client
+it has to looks like this
+
+    ![todoapp](https://github.com/hashdog/hlf-2.2-docker-rails-6-nestjs-fabric-nodesdk/blob/media/todoapp.png?raw=true "todoapp")
+
+all request going to send directly to `HYPERLEDGER FABRIC`, if you want you can check the fabric ruby client
+
 
     `lib/services/hyperledger_fabric_client.rb`
 
